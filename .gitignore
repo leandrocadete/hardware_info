@@ -1,3 +1,8 @@
+# Folders
+Debug
+Release
+.vs
+
 # Prerequisites
 *.d
 
@@ -30,3 +35,8 @@
 *.exe
 *.out
 *.app
+
+/wmic_visual/cerr
+/wmic_visual/cout
+/wmic_visual/sysinfo.json
+/wmic_visual/wmic_visual.vcxproj.user
