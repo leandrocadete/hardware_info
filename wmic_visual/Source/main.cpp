@@ -19,12 +19,12 @@ IWbemServices *pSvc = NULL;
 
 void writeJson();
 
-#include "testProcesses.h"
-#include "testPhysicalDisk.h"
-#include "testMemory.h"
-#include "testNetworAdapter.h"
-#include "testservice.h"
-#include "testcpu.h"
+#include "Service/testProcesses.h"
+#include "Service/testPhysicalDisk.h"
+#include "Service/testMemory.h"
+#include "Service/testNetworAdapter.h"
+#include "Service/testservice.h"
+#include "Service/testcpu.h"
 
 void help();
 void printTime();

@@ -78,41 +78,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include=".\Source\absttest.h" />
-    <ClInclude Include="Source\CPU.h" />
-    <ClInclude Include="Source\Dao.h" />
-    <ClInclude Include="Source\DaoCpu.h" />
-    <ClInclude Include="Source\DaoMemory.h" />
-    <ClInclude Include="Source\DaoNetworkAdapter.h" />
-    <ClInclude Include="Source\DaoNetworkAdapterConfiguration.h" />
-    <ClInclude Include="Source\DaoPartition.h" />
-    <ClInclude Include="Source\DaoPhysicalDisk.h" />
-    <ClInclude Include="Source\DaoPhysicalMemory.h" />
-    <ClInclude Include="Source\DaoProcess.h" />
-    <ClInclude Include="Source\daoservice.h" />
-    <ClInclude Include="Source\Memory.h" />
-    <ClInclude Include="Source\NetworkAdapter.h" />
-    <ClInclude Include="Source\NetworkAdapterConfiguration.h" />
-    <ClInclude Include="Source\Partition.h" />
-    <ClInclude Include="Source\PhysicalDisk.h" />
-    <ClInclude Include="Source\PhysicalMemory.h" />
-    <ClInclude Include="Source\Process.h" />
-    <ClInclude Include="Source\service.h" />
-    <ClInclude Include="Source\testcpu.h" />
-    <ClInclude Include="Source\testMemory.h" />
-    <ClInclude Include="Source\testNetworAdapter.h" />
-    <ClInclude Include="Source\testPhysicalDisk.h" />
-    <ClInclude Include="Source\testProcesses.h" />
-    <ClInclude Include="Source\testservice.h" />
-    <ClInclude Include="Source\win32.h" />
+    <ClInclude Include="Source\Service\absttest.h" />
+    <ClInclude Include="Source\Model\CPU.h" />
+    <ClInclude Include="Source\Dao\Dao.h" />
+    <ClInclude Include="Source\Dao\DaoCpu.h" />
+    <ClInclude Include="Source\Dao\DaoMemory.h" />
+    <ClInclude Include="Source\Dao\DaoNetworkAdapter.h" />
+    <ClInclude Include="Source\Dao\DaoNetworkAdapterConfiguration.h" />
+    <ClInclude Include="Source\Dao\DaoPartition.h" />
+    <ClInclude Include="Source\Dao\DaoPhysicalDisk.h" />
+    <ClInclude Include="Source\Dao\DaoPhysicalMemory.h" />
+    <ClInclude Include="Source\Dao\DaoProcess.h" />
+    <ClInclude Include="Source\Dao\daoservice.h" />
+    <ClInclude Include="Source\Model\Memory.h" />
+    <ClInclude Include="Source\Model\NetworkAdapter.h" />
+    <ClInclude Include="Source\Model\NetworkAdapterConfiguration.h" />
+    <ClInclude Include="Source\Model\Partition.h" />
+    <ClInclude Include="Source\Model\PhysicalDisk.h" />
+    <ClInclude Include="Source\Model\PhysicalMemory.h" />
+    <ClInclude Include="Source\Model\Process.h" />
+    <ClInclude Include="Source\Model\service.h" />
+    <ClInclude Include="Source\Service\testcpu.h" />
+    <ClInclude Include="Source\Service\testMemory.h" />
+    <ClInclude Include="Source\Service\testNetworAdapter.h" />
+    <ClInclude Include="Source\Service\testPhysicalDisk.h" />
+    <ClInclude Include="Source\Service\testProcesses.h" />
+    <ClInclude Include="Source\Service\testservice.h" />
+    <ClInclude Include="Source\Model\win32.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\cpu.cpp" />
-    <ClCompile Include="Source\DaoCpu.cpp" />
-    <ClCompile Include="Source\daoservice.cpp" />
+    <ClCompile Include="Source\Model\cpu.cpp" />
+    <ClCompile Include="Source\Dao\DaoCpu.cpp" />
+    <ClCompile Include="Source\Dao\daoservice.cpp" />
     <ClCompile Include="Source\main.cpp" />
-    <ClCompile Include="Source\service.cpp" />
-    <ClCompile Include="Source\win32.cpp" />
+    <ClCompile Include="Source\Model\service.cpp" />
+    <ClCompile Include="Source\Model\win32.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cerr" />

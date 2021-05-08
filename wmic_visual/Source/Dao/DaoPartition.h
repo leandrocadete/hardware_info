@@ -3,7 +3,7 @@
 
 #pragma comment(lib, "wbemuuid.lib")
 
-#include "partition.h"
+#include "../Model/partition.h"
 #include <list>
 
 

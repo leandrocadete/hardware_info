@@ -2,16 +2,16 @@
 #define DAO_H
 
 
-#include "win32.h"
+#include "../Model/win32.h"
 #include "DaoPartition.h"
 #include "DaoProcess.h"
 #include "DaoPhysicalMemory.h"
 #include "DaoMemory.h"
 
-#include "Partition.h"
-#include "PhysicalDisk.h"
+#include "../Model/Partition.h"
+#include "../Model/PhysicalDisk.h"
 #include "Process.h"
-#include "PhysicalMemory.h"
+#include "../Model/PhysicalMemory.h"
 #include "Memory.h"
 
 #endif

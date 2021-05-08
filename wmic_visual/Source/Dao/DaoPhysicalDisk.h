@@ -2,7 +2,7 @@
 #define DAOPHYSICALDISK_H
 
 #include "Dao.h"
-#include "win32.h"
+#include "../Model/win32.h"
 //#include "PhysicalDisk.h"
 //#include "DaoPartition.h"
 #include <list>

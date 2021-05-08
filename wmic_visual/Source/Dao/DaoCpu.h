@@ -1,8 +1,8 @@
 #ifndef DAOCPU_H
 #define DAOCPU_H
 
-#include "win32.h"
-#include "CPU.h"
+#include "../Model/win32.h"
+#include "../Model/CPU.h"
 #include <list>
 
 class DaoCpu : private Win32Objs {

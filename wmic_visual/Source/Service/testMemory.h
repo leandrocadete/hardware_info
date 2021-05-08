@@ -1,7 +1,7 @@
 #ifndef TEST_MEMORY_H
 #define TEST_MEMORY_H
 
-#include "DaoMemory.h"
+#include "../Dao/DaoMemory.h"
 #include <string>
 
 class TestMemory {

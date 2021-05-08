@@ -15,105 +15,105 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include=".\Source\absttest.h">
+    <ClInclude Include="Source\Service\absttest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\CPU.h">
+    <ClInclude Include="Source\Model\CPU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Dao.h">
+    <ClInclude Include="Source\Dao\Dao.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DaoCpu.h">
+    <ClInclude Include="Source\Dao\DaoCpu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DaoMemory.h">
+    <ClInclude Include="Source\Dao\DaoMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DaoNetworkAdapter.h">
+    <ClInclude Include="Source\Dao\DaoNetworkAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DaoNetworkAdapterConfiguration.h">
+    <ClInclude Include="Source\Dao\DaoNetworkAdapterConfiguration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DaoPartition.h">
+    <ClInclude Include="Source\Dao\DaoPartition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DaoPhysicalDisk.h">
+    <ClInclude Include="Source\Dao\DaoPhysicalDisk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DaoPhysicalMemory.h">
+    <ClInclude Include="Source\Dao\DaoPhysicalMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\DaoProcess.h">
+    <ClInclude Include="Source\Dao\DaoProcess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\daoservice.h">
+    <ClInclude Include="Source\Dao\daoservice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Memory.h">
+    <ClInclude Include="Source\Model\Memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\NetworkAdapter.h">
+    <ClInclude Include="Source\Model\NetworkAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\NetworkAdapterConfiguration.h">
+    <ClInclude Include="Source\Model\NetworkAdapterConfiguration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Partition.h">
+    <ClInclude Include="Source\Model\Partition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\PhysicalDisk.h">
+    <ClInclude Include="Source\Model\PhysicalDisk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\PhysicalMemory.h">
+    <ClInclude Include="Source\Model\PhysicalMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Process.h">
+    <ClInclude Include="Source\Model\Process.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\service.h">
+    <ClInclude Include="Source\Model\service.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\testcpu.h">
+    <ClInclude Include="Source\Service\testcpu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\testMemory.h">
+    <ClInclude Include="Source\Service\testMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\testNetworAdapter.h">
+    <ClInclude Include="Source\Service\testNetworAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\testPhysicalDisk.h">
+    <ClInclude Include="Source\Service\testPhysicalDisk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\testProcesses.h">
+    <ClInclude Include="Source\Service\testProcesses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\testservice.h">
+    <ClInclude Include="Source\Service\testservice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\win32.h">
+    <ClInclude Include="Source\Model\win32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\cpu.cpp">
+    <ClCompile Include="Source\Model\cpu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\DaoCpu.cpp">
+    <ClCompile Include="Source\Dao\DaoCpu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\daoservice.cpp">
+    <ClCompile Include="Source\Dao\daoservice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\service.cpp">
+    <ClCompile Include="Source\Model\service.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\win32.cpp">
+    <ClCompile Include="Source\Model\win32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

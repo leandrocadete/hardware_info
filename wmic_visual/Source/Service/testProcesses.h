@@ -1,5 +1,5 @@
 #include "absttest.h"
-#include "DaoProcess.h"
+#include "../Dao/DaoProcess.h"
 #include <string>
 class TestProcess /*: public AbsTest */{
 private:

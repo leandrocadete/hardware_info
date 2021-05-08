@@ -1,7 +1,7 @@
 #ifndef TEST_NETWORK_ADAPTER_H
 #define TEST_NETWORK_ADAPTER_H
 
-#include "DaoNetworkAdapter.h"
+#include "../Dao/DaoNetworkAdapter.h"
 #include <string>
 
 class TestNetworkAdapter {

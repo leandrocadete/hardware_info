@@ -2,8 +2,8 @@
 #define DAO_MEMORY_H
 
 //#include "Dao.h"
-#include "win32.h"
-#include "Memory.h"
+#include "../Model/win32.h"
+#include "../Model/Memory.h"
 #include "DaoPhysicalMemory.h"
 #include <list>
 

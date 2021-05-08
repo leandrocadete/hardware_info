@@ -1,8 +1,8 @@
 #ifndef DAO_NETWORK_ADAPTER
 #define DAO_NETWORK_ADAPTER
 
-#include "win32.h"
-#include "NetworkAdapter.h"
+#include "../Model/win32.h"
+#include "../Model/NetworkAdapter.h"
 #include "DaoNetworkAdapterConfiguration.h"
 #include <list>
 

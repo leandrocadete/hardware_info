@@ -1,8 +1,8 @@
 #ifndef DAOPROCESS_H
 #define DAOPROCESS_H
 
-#include "win32.h"
-#include "Process.h"
+#include "../Model/win32.h"
+#include "../Model/Process.h"
 #include <stack>
 
 class DaoProcess : private Win32Objs {

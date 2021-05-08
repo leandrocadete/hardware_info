@@ -2,7 +2,7 @@
 #define TEST_PHYSICAL_DISK
 
 #include "absttest.h"
-#include "DaoPhysicalDisk.h"
+#include "../Dao/DaoPhysicalDisk.h"
 
 class TestPhysicalDisk {
 private:

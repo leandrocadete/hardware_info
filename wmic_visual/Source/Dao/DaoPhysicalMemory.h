@@ -4,8 +4,8 @@
 
 #include <list>
 //#include "Dao.h"
-#include "win32.h"
-#include "PhysicalMemory.h"
+#include "../Model/win32.h"
+#include "../Model/PhysicalMemory.h"
 
 class DaoPhysicalMemory : private Win32Objs {
 private:
