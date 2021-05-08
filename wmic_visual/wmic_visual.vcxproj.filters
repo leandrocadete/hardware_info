@@ -15,129 +15,129 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\win32.h">
+    <ClInclude Include=".\Source\abstJson.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_physicalDisk.h">
+    <ClInclude Include=".\Source\absttest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_processes.h">
+    <ClInclude Include="Source\CPU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_service.h">
+    <ClInclude Include="Source\Dao.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\Memory.h">
+    <ClInclude Include="Source\DaoCpu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\NetworkAdapter.h">
+    <ClInclude Include="Source\DaoMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\NetworkAdapterConfiguration.h">
+    <ClInclude Include="Source\DaoNetworkAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\Partition.h">
+    <ClInclude Include="Source\DaoNetworkAdapterConfiguration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\PhysicalDisk.h">
+    <ClInclude Include="Source\DaoPartition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\PhysicalMemory.h">
+    <ClInclude Include="Source\DaoPhysicalDisk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\Process.h">
+    <ClInclude Include="Source\DaoPhysicalMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\service.h">
+    <ClInclude Include="Source\DaoProcess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testcpu.h">
+    <ClInclude Include="Source\daoservice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testMemory.h">
+    <ClInclude Include="Source\json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testNetworAdapter.h">
+    <ClInclude Include="Source\json_cpu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testPhysicalDisk.h">
+    <ClInclude Include="Source\json_memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testProcesses.h">
+    <ClInclude Include="Source\json_physicalDisk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testservice.h">
+    <ClInclude Include="Source\json_processes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\abstJson.h">
+    <ClInclude Include="Source\json_service.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\absttest.h">
+    <ClInclude Include="Source\Memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\CPU.h">
+    <ClInclude Include="Source\NetworkAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\Dao.h">
+    <ClInclude Include="Source\NetworkAdapterConfiguration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoCpu.h">
+    <ClInclude Include="Source\Partition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoMemory.h">
+    <ClInclude Include="Source\PhysicalDisk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoNetworkAdapter.h">
+    <ClInclude Include="Source\PhysicalMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoNetworkAdapterConfiguration.h">
+    <ClInclude Include="Source\Process.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoPartition.h">
+    <ClInclude Include="Source\service.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoPhysicalDisk.h">
+    <ClInclude Include="Source\testcpu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoPhysicalMemory.h">
+    <ClInclude Include="Source\testMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoProcess.h">
+    <ClInclude Include="Source\testNetworAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\daoservice.h">
+    <ClInclude Include="Source\testPhysicalDisk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json.h">
+    <ClInclude Include="Source\testProcesses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_cpu.h">
+    <ClInclude Include="Source\testservice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_memory.h">
+    <ClInclude Include="Source\win32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\DaoCpu.cpp">
+    <ClCompile Include="Source\cpu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\daoservice.cpp">
+    <ClCompile Include="Source\DaoCpu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\json.cpp">
+    <ClCompile Include="Source\daoservice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\main.cpp">
+    <ClCompile Include="Source\json.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\service.cpp">
+    <ClCompile Include="Source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\win32.cpp">
+    <ClCompile Include="Source\service.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\cpu.cpp">
+    <ClCompile Include="Source\win32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -151,5 +151,6 @@
     <None Include="cout">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

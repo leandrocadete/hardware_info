@@ -14,6 +14,7 @@
     <ProjectGuid>{96D447F5-AEB1-4714-A58C-FD89117F79F8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>wmic_visual</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -52,6 +53,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_66_0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -76,56 +78,64 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\abstJson.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\absttest.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\CPU.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\Dao.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoCpu.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoMemory.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoNetworkAdapter.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoNetworkAdapterConfiguration.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoPartition.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoPhysicalDisk.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoPhysicalMemory.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\DaoProcess.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\daoservice.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_cpu.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_memory.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_physicalDisk.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_processes.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\json_service.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\Memory.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\NetworkAdapter.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\NetworkAdapterConfiguration.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\Partition.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\PhysicalDisk.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\PhysicalMemory.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\Process.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\service.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testcpu.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testMemory.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testNetworAdapter.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testPhysicalDisk.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testProcesses.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\testservice.h" />
-    <ClInclude Include="..\..\..\wmic_qt_home\wmic_qt\win32.h" />
+    <ClInclude Include=".\Source\abstJson.h" />
+    <ClInclude Include=".\Source\absttest.h" />
+    <ClInclude Include="Source\CPU.h" />
+    <ClInclude Include="Source\Dao.h" />
+    <ClInclude Include="Source\DaoCpu.h" />
+    <ClInclude Include="Source\DaoMemory.h" />
+    <ClInclude Include="Source\DaoNetworkAdapter.h" />
+    <ClInclude Include="Source\DaoNetworkAdapterConfiguration.h" />
+    <ClInclude Include="Source\DaoPartition.h" />
+    <ClInclude Include="Source\DaoPhysicalDisk.h" />
+    <ClInclude Include="Source\DaoPhysicalMemory.h" />
+    <ClInclude Include="Source\DaoProcess.h" />
+    <ClInclude Include="Source\daoservice.h" />
+    <ClInclude Include="Source\json.h" />
+    <ClInclude Include="Source\json_cpu.h" />
+    <ClInclude Include="Source\json_memory.h" />
+    <ClInclude Include="Source\json_physicalDisk.h" />
+    <ClInclude Include="Source\json_processes.h" />
+    <ClInclude Include="Source\json_service.h" />
+    <ClInclude Include="Source\Memory.h" />
+    <ClInclude Include="Source\NetworkAdapter.h" />
+    <ClInclude Include="Source\NetworkAdapterConfiguration.h" />
+    <ClInclude Include="Source\Partition.h" />
+    <ClInclude Include="Source\PhysicalDisk.h" />
+    <ClInclude Include="Source\PhysicalMemory.h" />
+    <ClInclude Include="Source\Process.h" />
+    <ClInclude Include="Source\service.h" />
+    <ClInclude Include="Source\testcpu.h" />
+    <ClInclude Include="Source\testMemory.h" />
+    <ClInclude Include="Source\testNetworAdapter.h" />
+    <ClInclude Include="Source\testPhysicalDisk.h" />
+    <ClInclude Include="Source\testProcesses.h" />
+    <ClInclude Include="Source\testservice.h" />
+    <ClInclude Include="Source\win32.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\cpu.cpp" />
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\DaoCpu.cpp" />
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\daoservice.cpp" />
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\json.cpp" />
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\main.cpp" />
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\service.cpp" />
-    <ClCompile Include="..\..\..\wmic_qt_home\wmic_qt\win32.cpp" />
+    <ClCompile Include="Source\cpu.cpp" />
+    <ClCompile Include="Source\DaoCpu.cpp" />
+    <ClCompile Include="Source\daoservice.cpp" />
+    <ClCompile Include="Source\json.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\service.cpp" />
+    <ClCompile Include="Source\win32.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cerr" />
     <None Include="cout" />
+    <None Include="packages.config" />
     <None Include="sysinfo.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\nlohmann.json.3.9.1\build\native\nlohmann.json.targets" Condition="Exists('packages\nlohmann.json.3.9.1\build\native\nlohmann.json.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\nlohmann.json.3.9.1\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\nlohmann.json.3.9.1\build\native\nlohmann.json.targets'))" />
+  </Target>
 </Project>
