@@ -1,2 +1,2 @@
 # hardware_info
-Get Hardware Information With C++ (Windows)
+This is console application to get hardware information with from windows.

@@ -10,8 +10,7 @@
 #include <vector>
 
 using namespace std;
-class Win32_Wmi
-{
+class Win32_Wmi {
 public:
     Win32_Wmi(){}
     ~Win32_Wmi(){
@@ -23,6 +22,7 @@ public:
 	}
 	
 };
+
 class Win32Objs {
 protected:
 	IWbemLocator *gpLoc;
@@ -30,8 +30,7 @@ protected:
 
 	IEnumWbemClassObject* init(const char *win32_class, HRESULT &hres) {
 		IEnumWbemClassObject *pEnumerator;
-		//process = new Process();
-		// Initialize COM. 
+
 		hres = CoInitializeEx(0, COINIT_MULTITHREADED);
 		if (FAILED(hres)) {
 			cout << "Failed to initialize COM library. Error code = 0x" << hex << hres << endl;

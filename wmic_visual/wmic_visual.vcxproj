@@ -78,7 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include=".\Source\abstJson.h" />
     <ClInclude Include=".\Source\absttest.h" />
     <ClInclude Include="Source\CPU.h" />
     <ClInclude Include="Source\Dao.h" />
@@ -91,12 +90,6 @@
     <ClInclude Include="Source\DaoPhysicalMemory.h" />
     <ClInclude Include="Source\DaoProcess.h" />
     <ClInclude Include="Source\daoservice.h" />
-    <ClInclude Include="Source\json.h" />
-    <ClInclude Include="Source\json_cpu.h" />
-    <ClInclude Include="Source\json_memory.h" />
-    <ClInclude Include="Source\json_physicalDisk.h" />
-    <ClInclude Include="Source\json_processes.h" />
-    <ClInclude Include="Source\json_service.h" />
     <ClInclude Include="Source\Memory.h" />
     <ClInclude Include="Source\NetworkAdapter.h" />
     <ClInclude Include="Source\NetworkAdapterConfiguration.h" />
@@ -117,7 +110,6 @@
     <ClCompile Include="Source\cpu.cpp" />
     <ClCompile Include="Source\DaoCpu.cpp" />
     <ClCompile Include="Source\daoservice.cpp" />
-    <ClCompile Include="Source\json.cpp" />
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\service.cpp" />
     <ClCompile Include="Source\win32.cpp" />

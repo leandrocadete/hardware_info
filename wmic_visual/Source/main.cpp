@@ -1,30 +1,21 @@
 #define MISSIN_ARGUMENT -1
 #define TEST_MODE 1;
 
-
-
-//#include <boost\asio.hpp>
 #include <nlohmann/json.hpp>
 #include <iostream>
 #include <Windows.h>
 #include <comdef.h>
 #include <WbemIdl.h>
-
 #include <ctime>
+
 using namespace std;
 using namespace nlohmann;
 
-
-//#pragma comment(linker, "/SUBSYSTEM:WINDOWS")
 #pragma comment(lib, "wbemuuid.lib")
 #include <dciman.h>
 
 IWbemLocator *pLoc = NULL;
 IWbemServices *pSvc = NULL;
-// Testes
-BOOL wmi_run();
-BOOL wmi_getDriveLetters();
-BOOL wmi_close();
 
 void writeJson();
 
@@ -35,58 +26,12 @@ void writeJson();
 #include "testservice.h"
 #include "testcpu.h"
 
-#include "json.h"
-//#include "jsonfile.h"
-
 void help();
 void printTime();
-//int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int  nCmdShow){
+
 int main(int argc, char** argv) {
-	//FreeConsole();
 	SetConsoleOutputCP(CP_UTF8);
-    if (/*argc == 2 && strcpy(argv[1], "-j")*/ false) { // generate Json file as output
-		/*string fName = "sysinfo.json";
-		ofstream file(fName);
-		ofstream *ptrFile;
-		ptrFile = &file;
-		if(!file.is_open()) {
-            cerr << "Erro to open file:" << fName << endl;
-            return false;
-        }
-
-		file << "[" << endl;				
-		JsonMemory *jm = new JsonMemory(ptrFile);
-		jm->gererateJson();
-		ptrFile->close();
-		delete jm;
-		
-		ptrFile->open(fName, ios::app);
-		JsonCpu *jc = new JsonCpu(ptrFile);
-        jc->generateJson();
-		ptrFile->close();
-		delete jc;		
-
-		ptrFile->open(fName, ios::app);
-		JsonPhysicalDisk *jp = new JsonPhysicalDisk(ptrFile);
-		jp->gererateJson();
-
-		file << "]";
-        ptrFile->close();
-		
-		delete jp;
-		delete ptrFile;*/
-
-    } else if (true) { // test project
-		int i = 0;
-		for (int i = 0; i < 1; i++) {
-			writeJson();
-		}		
-    } else if (1 == 0) {
-        cerr << "Missin argument" << endl;
-        help();
-		printTime();
-        return MISSIN_ARGUMENT;
-    }
+	writeJson();
 	printTime();
     return 0;
 }
@@ -107,11 +52,8 @@ void help() {
 
 void writeJson() {
 	bool flag = true;
-	Sleep(1000);
-	int i = 0; i++;
 	ofstream file;
 	file.open("sysinfo.json", ios::trunc);
-	string str_ouput;
 	json j;
 	
 	cout << "inicio" << endl;

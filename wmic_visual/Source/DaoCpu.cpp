@@ -1,9 +1,7 @@
 #include "DaoCpu.h"
 
-DaoCpu::DaoCpu()
-{
+DaoCpu::DaoCpu(){}
 
-}
 list<CPU*> DaoCpu::loadCpus() {
     char win32_class[] = "SELECT * FROM Win32_Processor";
     HRESULT hres = NULL;
@@ -95,9 +93,6 @@ list<CPU*> DaoCpu::loadCpus() {
         vector<uint16_t> vpmc;
         //vpmc = getVectorChars();
 
-
-
-
         //cpu->setPowerManagementCapabilities(vpmc);
         getBoolean(L"PowerManagementSupported", &vtProp, pclsObj, b);
         cpu->setPowerManagementSupported(b);
@@ -128,9 +123,6 @@ list<CPU*> DaoCpu::loadCpus() {
         getString(L"Caption", &vtProp, pclsObj, str);
         cpu->setSystemName(str);
 
-
-
-
         getuInt32(L"ThreadCount", &vtProp, pclsObj, u32);
         cpu->setThreadCount(u32);
         getString(L"UniqueId", &vtProp, pclsObj, str);
@@ -138,18 +130,13 @@ list<CPU*> DaoCpu::loadCpus() {
         getBoolean(L"VirtualizationFirmwareEnabled", &vtProp, pclsObj, b);
         cpu->setVirtualizationFirmwareEnabled(b);
 
-
-
         getBoolean(L"VMMonitorModeExtensions", &vtProp, pclsObj, b);
         cpu->setVMMonitorModeExtensions(b);
-
-
 
         getuInt32(L"VoltageCaps", &vtProp, pclsObj, u32);
         cpu->setVoltageCaps(u32);
 
         cpus.push_back(cpu);
-
     }
     return cpus;
 }
