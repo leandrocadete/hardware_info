@@ -20,8 +20,8 @@
 using namespace std;
 using namespace nlohmann;
 
-IWbemLocator *pLoc = NULL;
-IWbemServices *pSvc = NULL;
+IWbemLocator* pLoc = NULL;
+IWbemServices* pSvc = NULL;
 void writeJson();
 void help();
 void printTime();
@@ -30,46 +30,47 @@ int main(int argc, char** argv) {
 	SetConsoleOutputCP(CP_UTF8);
 	writeJson();
 	printTime();
-    return 0;
+	return 0;
 }
 
 void printTime() {
 	time_t t = time(0);
-    struct tm* now = localtime(&t);
-    cerr << now->tm_year + 1900 << "/" << now->tm_mon + 1 << "/" << now->tm_mday << " " << now->tm_hour << ":" << now->tm_min << endl;
-    cout << now->tm_year + 1900 << "/" << now->tm_mon + 1 << "/" << now->tm_mday << " " << now->tm_hour << ":" << now->tm_min << endl;
+	struct tm* now = localtime(&t);
+	cerr << now->tm_year + 1900 << "/" << now->tm_mon + 1 << "/" << now->tm_mday << " " << now->tm_hour << ":" << now->tm_min << endl;
+	cout << now->tm_year + 1900 << "/" << now->tm_mon + 1 << "/" << now->tm_mday << " " << now->tm_hour << ":" << now->tm_min << endl;
 }
 
 void help() {
-    cout << "Usage: sysinfo argument" << endl;
-    cout << "\t -j Generate json file as output" << endl;
-    cout << "\t -t Test mode" << endl;
-
+	cout << "Usage: sysinfo argument" << endl;
+	cout << "\t -j Generate json file as output" << endl;
 }
 
 void writeJson() {
-	bool flag = true;
 	ofstream file;
 	file.open("sysinfo.json", ios::trunc);
 	json j;
-	
-	cout << "inicio" << endl;
-	ServiceProcess *testProcess = new ServiceProcess();
+
+	cout << "Begin" << endl;
+
+	ServiceProcess* testProcess = new ServiceProcess();
 	auto processes = testProcess->getProcess();
 	while (!processes.empty()) {
 		auto p = processes.top();
-		
+
 		j["Processes"] += {
-			{"Name", p->getName().c_str()},
-			{"State", p->getExecutionState()},
+
+			{ "Name", p->getName().c_str() },
+			{ "Description", p->getDescription().c_str() },
+			{ "CommandLine", p->getCommandLine().c_str() },
+			{ "State", p->getExecutionState() }
 		};
 		processes.pop();
 	}
 	testProcess->~ServiceProcess();
 
-	ServicePhysicalDisk *testPhysicalDisk = new ServicePhysicalDisk();
+	ServicePhysicalDisk* testPhysicalDisk = new ServicePhysicalDisk();
 	auto disks = testPhysicalDisk->getPhysicalDisks();
-	while (!disks.empty()) 	{
+	while (!disks.empty()) {
 		auto d = disks.back();
 		j["Disks"] += {
 			{ "Name", d->getName() },
@@ -80,20 +81,21 @@ void writeJson() {
 	}
 	testPhysicalDisk->~ServicePhysicalDisk();
 
-	ServiceMemory *testMemory = new ServiceMemory();
+	ServiceMemory* testMemory = new ServiceMemory();
 	auto memories = testMemory->getMomories();
 	while (!memories.empty()) {
 		auto m = memories.back();
 		j["Memories"] += {
 			{ "Caption", m->getCaption() },
 			{ "Capacity", m->getCapacity() },
-			{ "BankLabel", m->getBankLabel() }
+			{ "BankLabel", m->getBankLabel() },
+			{ "Speed", m->getSpeed() }
 		};
 		memories.pop_back();
 	}
 	testMemory->~ServiceMemory();
 
-	ServiceNetworkAdapter *testNetworAdapter = new ServiceNetworkAdapter();
+	ServiceNetworkAdapter* testNetworAdapter = new ServiceNetworkAdapter();
 	auto networkAdapters = testNetworAdapter->getNetworkAdapters();
 	while (!networkAdapters.empty()) {
 		auto adapter = networkAdapters.back();
@@ -106,7 +108,7 @@ void writeJson() {
 	}
 	testNetworAdapter->~ServiceNetworkAdapter();
 
-	ServiceServices *testService = new ServiceServices();
+	ServiceServices* testService = new ServiceServices();
 	auto services = testService->getServices();
 	while (!services.empty()) {
 		auto s = services.back();
@@ -119,20 +121,22 @@ void writeJson() {
 	}
 	testService->~ServiceServices();
 
-	ServiceCpu *testCpu = new ServiceCpu();
+	ServiceCpu* testCpu = new ServiceCpu();
 	auto cpus = testCpu->getCpus();
 	while (!cpus.empty()) {
 		auto c = cpus.back();
 		j["CPU"] += {
 			{ "Name", c->getName() },
 			{ "Cores", c->getNumberOfCores() },
-			{ "Cores", c->getMaxClockSpeed() }
+			{ "MaxClockSpeed", c->getMaxClockSpeed() },
+			{ "Architecture", c->getArchitecture() },
+			{ "Status", c->getStatus() }
 		};
 		cpus.pop_back();
 	}
 	testCpu->~ServiceCpu();
 	std::streamsize size = j.dump().size();
 	file.write(j.dump().c_str(), size);
-		
+
 	file.close();
 }
