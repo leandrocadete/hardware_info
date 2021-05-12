@@ -1,19 +1,19 @@
 #ifndef TEST_PHYSICAL_DISK
 #define TEST_PHYSICAL_DISK
 
-#include "absttest.h"
+#include "absServices.h"
 #include "../Dao/DaoPhysicalDisk.h"
 
-class TestPhysicalDisk {
+class ServicePhysicalDisk {
 private:
 	DaoPhysicalDisk *dao;
 	PhysicalDisk *disk;
 	list<PhysicalDisk*> disks;
 public:
-	TestPhysicalDisk() {
+	ServicePhysicalDisk() {
 		dao = new DaoPhysicalDisk();
 	}
-	~TestPhysicalDisk(){
+	~ServicePhysicalDisk(){
 		cout << "Objeto TestePhysicalDisk destruido" << endl;
 	}
 	bool testInit() {

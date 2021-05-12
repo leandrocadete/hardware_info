@@ -1,7 +1,7 @@
-#include "absttest.h"
+#include "absServices.h"
 #include "../Dao/DaoProcess.h"
 #include <string>
-class TestProcess /*: public AbsTest */{
+class ServiceProcess /*: public AbsTest */{
 private:
 	stack<Process*> processes;
 	DaoProcess *dao;
@@ -11,10 +11,10 @@ public:
 		dao->loadData();
 		return dao->getProcesses();
 	}
-	TestProcess() {
+	ServiceProcess() {
 		dao = new DaoProcess();		
 	}
-	~TestProcess() {
+	~ServiceProcess() {
 		cout << "Objeto TestProcess destruido" << endl;
 	}
 	bool testInit() {

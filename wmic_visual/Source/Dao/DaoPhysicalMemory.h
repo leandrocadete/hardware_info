@@ -65,9 +65,7 @@ public:
 
 			memories.push_back(memory);
 		}
-		gpSvc->Release();
-		gpLoc->Release();
-		CoUninitialize();
+		release();
 		return memories;
 	}
 };

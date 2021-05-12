@@ -7,15 +7,15 @@
 #include <string>
 #include <list>
 
-class TestService {
+class ServiceServices {
 private:
     list<Service*> services;
     DaoService *dao;
     Service *service;
 	//ofstream file;
 public:
-    TestService() { }
-    ~TestService() {
+    ServiceServices() { }
+    ~ServiceServices() {
         cout << "Objeto TestService destruído" << endl;
     }
 

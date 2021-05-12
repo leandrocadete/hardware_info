@@ -78,7 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Service\absttest.h" />
     <ClInclude Include="Source\Model\CPU.h" />
     <ClInclude Include="Source\Dao\Dao.h" />
     <ClInclude Include="Source\Dao\DaoCpu.h" />
@@ -98,13 +97,16 @@
     <ClInclude Include="Source\Model\PhysicalMemory.h" />
     <ClInclude Include="Source\Model\Process.h" />
     <ClInclude Include="Source\Model\service.h" />
-    <ClInclude Include="Source\Service\testcpu.h" />
-    <ClInclude Include="Source\Service\testMemory.h" />
-    <ClInclude Include="Source\Service\testNetworAdapter.h" />
-    <ClInclude Include="Source\Service\testPhysicalDisk.h" />
-    <ClInclude Include="Source\Service\testProcesses.h" />
-    <ClInclude Include="Source\Service\testservice.h" />
     <ClInclude Include="Source\Model\win32.h" />
+    <ClInclude Include="Source\Service\absServices.h" />
+    <ClInclude Include="Source\Service\serviceCpu.h">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="Source\Service\serviceMemory.h" />
+    <ClInclude Include="Source\Service\serviceNetworkAdapter.h" />
+    <ClInclude Include="Source\Service\servicePhysicalDisk.h" />
+    <ClInclude Include="Source\Service\serviceProcesses.h" />
+    <ClInclude Include="Source\Service\serviceServices.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Model\cpu.cpp" />

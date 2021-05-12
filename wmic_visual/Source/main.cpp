@@ -7,25 +7,22 @@
 #include <comdef.h>
 #include <WbemIdl.h>
 #include <ctime>
+#pragma comment(lib, "wbemuuid.lib")
+#include <dciman.h>
+
+#include "Service/serviceProcesses.h"
+#include "Service/servicePhysicalDisk.h"
+#include "Service/serviceMemory.h"
+#include "Service/serviceNetworkAdapter.h"
+#include "Service/serviceServices.h"
+#include "Service/serviceCpu.h"
 
 using namespace std;
 using namespace nlohmann;
 
-#pragma comment(lib, "wbemuuid.lib")
-#include <dciman.h>
-
 IWbemLocator *pLoc = NULL;
 IWbemServices *pSvc = NULL;
-
 void writeJson();
-
-#include "Service/testProcesses.h"
-#include "Service/testPhysicalDisk.h"
-#include "Service/testMemory.h"
-#include "Service/testNetworAdapter.h"
-#include "Service/testservice.h"
-#include "Service/testcpu.h"
-
 void help();
 void printTime();
 
@@ -57,7 +54,7 @@ void writeJson() {
 	json j;
 	
 	cout << "inicio" << endl;
-	TestProcess *testProcess = new TestProcess();
+	ServiceProcess *testProcess = new ServiceProcess();
 	auto processes = testProcess->getProcess();
 	while (!processes.empty()) {
 		auto p = processes.top();
@@ -68,10 +65,9 @@ void writeJson() {
 		};
 		processes.pop();
 	}
-	//printf("%s", j.dump().c_str());
-	testProcess->~TestProcess();
+	testProcess->~ServiceProcess();
 
-	TestPhysicalDisk *testPhysicalDisk = new TestPhysicalDisk();
+	ServicePhysicalDisk *testPhysicalDisk = new ServicePhysicalDisk();
 	auto disks = testPhysicalDisk->getPhysicalDisks();
 	while (!disks.empty()) 	{
 		auto d = disks.back();
@@ -82,9 +78,9 @@ void writeJson() {
 		};
 		disks.pop_back();
 	}
-	testPhysicalDisk->~TestPhysicalDisk();
+	testPhysicalDisk->~ServicePhysicalDisk();
 
-	TestMemory *testMemory = new TestMemory();
+	ServiceMemory *testMemory = new ServiceMemory();
 	auto memories = testMemory->getMomories();
 	while (!memories.empty()) {
 		auto m = memories.back();
@@ -95,9 +91,9 @@ void writeJson() {
 		};
 		memories.pop_back();
 	}
-	testMemory->~TestMemory();
+	testMemory->~ServiceMemory();
 
-	TestNetworkAdapter *testNetworAdapter = new TestNetworkAdapter();
+	ServiceNetworkAdapter *testNetworAdapter = new ServiceNetworkAdapter();
 	auto networkAdapters = testNetworAdapter->getNetworkAdapters();
 	while (!networkAdapters.empty()) {
 		auto adapter = networkAdapters.back();
@@ -108,9 +104,9 @@ void writeJson() {
 		};
 		networkAdapters.pop_back();
 	}
-	testNetworAdapter->~TestNetworkAdapter();
+	testNetworAdapter->~ServiceNetworkAdapter();
 
-	TestService *testService = new TestService();
+	ServiceServices *testService = new ServiceServices();
 	auto services = testService->getServices();
 	while (!services.empty()) {
 		auto s = services.back();
@@ -121,9 +117,9 @@ void writeJson() {
 		};
 		services.pop_back();
 	}
-	testService->~TestService();
+	testService->~ServiceServices();
 
-	TestCpu *testCpu = new TestCpu();
+	ServiceCpu *testCpu = new ServiceCpu();
 	auto cpus = testCpu->getCpus();
 	while (!cpus.empty()) {
 		auto c = cpus.back();
@@ -134,7 +130,7 @@ void writeJson() {
 		};
 		cpus.pop_back();
 	}
-	testCpu->~TestCpu();
+	testCpu->~ServiceCpu();
 	std::streamsize size = j.dump().size();
 	file.write(j.dump().c_str(), size);
 		

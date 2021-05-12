@@ -6,13 +6,13 @@
 #include <list>
 class DaoService : private Win32Objs {
 private:
-    Service* service;
-    list<Service*> services;
+	Service* service;
+	list<Service*> services;
 public:
-    DaoService();
-    ~DaoService();
-    list<Service*> loadServices();
-    list<Service *> getServices() const;
+	DaoService();
+	~DaoService();
+	list<Service*> loadServices();
+	list<Service*> getServices() const;
 };
 
 #endif // DAOSERVICE_H

@@ -4,17 +4,17 @@
 #include "../Dao/DaoMemory.h"
 #include <string>
 
-class TestMemory {
+class ServiceMemory {
 private:
 	DaoMemory *dao;
 	PhysicalMemory *memory;
 	list<PhysicalMemory*> memories;
 	//ofstream file;
 public:
-	TestMemory() {
+	ServiceMemory() {
 		dao = new DaoMemory();
 	}
-	~TestMemory() {
+	~ServiceMemory() {
 		cout << "Objeto TestMemory destruido!" << endl;
 	}
 

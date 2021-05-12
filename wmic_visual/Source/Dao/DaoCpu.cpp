@@ -138,5 +138,6 @@ list<CPU*> DaoCpu::loadCpus() {
 
         cpus.push_back(cpu);
     }
+    release();
     return cpus;
 }

@@ -4,7 +4,7 @@
 #include "../Dao/DaoNetworkAdapter.h"
 #include <string>
 
-class TestNetworkAdapter {
+class ServiceNetworkAdapter {
 private:
 	DaoNetworkAdapter *dao;
 	NetworkAdapter *adapter;
@@ -12,10 +12,10 @@ private:
 	NetworkAdapterConfiguration configuration;
 	//ofstream file;
 public:
-	TestNetworkAdapter () {
+	ServiceNetworkAdapter () {
 		dao = new DaoNetworkAdapter();
 	}
-	~TestNetworkAdapter () { 
+	~ServiceNetworkAdapter () { 
 		cout << "Objeto TesteNetworAdapter destruido!" << endl;
 	}
 	list<NetworkAdapter*> getNetworkAdapters() {

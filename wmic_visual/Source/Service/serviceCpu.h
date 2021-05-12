@@ -1,19 +1,18 @@
 #include "../Dao/DaoCpu.h"
 #include <string>
-#include "absttest.h"
+#include "absServices.h"
 
-class TestCpu {
+class ServiceCpu {
 private:
     DaoCpu *dao;
     CPU *cpu;
     list<CPU*> cpus;	
-	//ofstream file;
 public:
-    TestCpu() {
+    ServiceCpu() {
         cout << "Constructor" << endl;		
         dao = new DaoCpu();
     }
-    ~TestCpu() {
+    ~ServiceCpu() {
         cout << "Objeto TestCpu destruido!" << endl;
     }
     list<CPU*> getCpus() {
