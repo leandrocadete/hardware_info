@@ -13,6 +13,7 @@ list<CPU*> DaoCpu::loadCpus() {
         hres = pEnumerator->Next(WBEM_INFINITE, 1, &pclsObj, &uReturn);
         if (uReturn == 0) break;
         VARIANT vtProp;
+        
         string str;
         uint32_t u32;
         uint16_t u16;

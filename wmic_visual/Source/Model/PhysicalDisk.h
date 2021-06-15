@@ -6,7 +6,7 @@
 #include "Partition.h"
 #include <list>
 
-class PhysicalDisk : public Win32_Wmi {
+class PhysicalDisk /*: public Win32_Wmi*/ {
 private:
 	//uint16_t Availability;
 	//uint32_t BytesPerSector;

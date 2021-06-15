@@ -35,21 +35,19 @@ int main(int argc, char** argv) {
 
 void printTime() {
 	time_t t = time(0);
-	struct tm* now = localtime(&t);
-	cerr << now->tm_year + 1900 << "/" << now->tm_mon + 1 << "/" << now->tm_mday << " " << now->tm_hour << ":" << now->tm_min << endl;
+	struct tm* now = localtime(&t);	
 	cout << now->tm_year + 1900 << "/" << now->tm_mon + 1 << "/" << now->tm_mday << " " << now->tm_hour << ":" << now->tm_min << endl;
 }
 
 void help() {
-	cout << "Usage: sysinfo argument" << endl;
-	cout << "\t -j Generate json file as output" << endl;
+	// TODO: To implement
 }
 
 void writeJson() {
 	ofstream file;
 	file.open("sysinfo.json", ios::trunc);
 	json j;
-
+	
 	cout << "Begin" << endl;
 
 	ServiceProcess* testProcess = new ServiceProcess();

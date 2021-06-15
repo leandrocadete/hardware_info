@@ -3,7 +3,7 @@
 
 #include "win32.h"
 
-class Process : public Win32_Wmi {
+class Process /*: public Win32_Wmi*/ {
 	string CommandLine;
 	string CreationDate;
 	string Description;
